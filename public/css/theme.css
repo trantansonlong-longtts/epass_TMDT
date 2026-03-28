@@ -1,0 +1,501 @@
+:root {
+    --app-bg: #f4f1ea;
+    --app-surface: rgba(255, 255, 255, 0.82);
+    --app-surface-strong: #ffffff;
+    --app-border: rgba(17, 24, 39, 0.08);
+    --app-text: #1f2937;
+    --app-muted: #6b7280;
+    --app-primary: #0f766e;
+    --app-primary-deep: #0b4f4b;
+    --app-accent: #e76f51;
+    --app-gold: #f4a261;
+    --app-success: #2a9d8f;
+    --app-danger: #c0392b;
+    --app-shadow: 0 22px 55px rgba(15, 23, 42, 0.10);
+    --app-radius-xl: 28px;
+    --app-radius-lg: 22px;
+    --app-radius-md: 16px;
+}
+
+body.app-shell {
+    position: relative;
+    background:
+        radial-gradient(circle at top left, rgba(244, 162, 97, 0.18), transparent 24%),
+        radial-gradient(circle at top right, rgba(42, 157, 143, 0.14), transparent 30%),
+        linear-gradient(180deg, #f7f4ee 0%, #f3efe7 100%);
+    color: var(--app-text);
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.app-bg {
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    z-index: -1;
+}
+
+.app-bg-orb {
+    border-radius: 999px;
+    filter: blur(18px);
+    opacity: 0.5;
+    position: absolute;
+}
+
+.app-bg-orb-one {
+    background: rgba(231, 111, 81, 0.18);
+    height: 260px;
+    left: -80px;
+    top: 80px;
+    width: 260px;
+}
+
+.app-bg-orb-two {
+    background: rgba(15, 118, 110, 0.14);
+    height: 360px;
+    right: -100px;
+    top: 180px;
+    width: 360px;
+}
+
+.app-grid {
+    background-image: linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+    background-position: center;
+    background-size: 44px 44px;
+    inset: 0;
+    opacity: 0.45;
+    position: absolute;
+}
+
+.app-navbar {
+    background: rgba(17, 24, 39, 0.78);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.app-brand {
+    align-items: center;
+    color: #fff;
+    display: inline-flex;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    gap: 0.9rem;
+}
+
+.app-brand:hover,
+.app-brand:focus {
+    color: #fff;
+}
+
+.app-brand strong,
+.app-brand small {
+    display: block;
+}
+
+.app-brand small {
+    color: rgba(255, 255, 255, 0.64);
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 0.73rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.app-brand-mark {
+    align-items: center;
+    background: linear-gradient(135deg, var(--app-gold), var(--app-accent));
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(231, 111, 81, 0.28);
+    color: #fff;
+    display: inline-flex;
+    font-size: 1.15rem;
+    height: 52px;
+    justify-content: center;
+    width: 52px;
+}
+
+.app-nav-link {
+    color: rgba(255, 255, 255, 0.78);
+    font-weight: 600;
+}
+
+.app-nav-link:hover,
+.app-nav-link:focus {
+    color: #fff;
+}
+
+.app-btn {
+    border: none;
+    border-radius: 999px;
+    font-weight: 700;
+    padding: 0.78rem 1.2rem;
+}
+
+.app-btn-primary {
+    background: linear-gradient(135deg, var(--app-primary), var(--app-primary-deep));
+    box-shadow: 0 14px 28px rgba(15, 118, 110, 0.24);
+    color: #fff;
+}
+
+.app-btn-primary:hover,
+.app-btn-primary:focus,
+.app-btn-accent:hover,
+.app-btn-accent:focus {
+    color: #fff;
+}
+
+.app-btn-accent {
+    background: linear-gradient(135deg, var(--app-accent), #d85b3b);
+    box-shadow: 0 14px 28px rgba(231, 111, 81, 0.24);
+    color: #fff;
+}
+
+.app-btn-outline {
+    background: rgba(255, 255, 255, 0.74);
+    border: 1px solid rgba(15, 118, 110, 0.16);
+    color: var(--app-primary-deep);
+}
+
+.app-alert {
+    border: 1px solid transparent;
+    border-radius: var(--app-radius-md);
+    padding: 1rem 1.2rem;
+}
+
+.app-alert-success {
+    background: rgba(42, 157, 143, 0.12);
+    border-color: rgba(42, 157, 143, 0.22);
+}
+
+.app-alert-danger {
+    background: rgba(192, 57, 43, 0.09);
+    border-color: rgba(192, 57, 43, 0.16);
+}
+
+.app-section {
+    margin-bottom: 2rem;
+}
+
+.app-surface {
+    background: var(--app-surface);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--app-border);
+    border-radius: var(--app-radius-xl);
+    box-shadow: var(--app-shadow);
+}
+
+.app-card {
+    background: var(--app-surface-strong);
+    border: 1px solid rgba(17, 24, 39, 0.06);
+    border-radius: var(--app-radius-lg);
+    box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+}
+
+.app-pill {
+    background: rgba(15, 118, 110, 0.10);
+    border: 1px solid rgba(15, 118, 110, 0.12);
+    border-radius: 999px;
+    color: var(--app-primary-deep);
+    display: inline-flex;
+    font-size: 0.86rem;
+    font-weight: 700;
+    gap: 0.45rem;
+    padding: 0.55rem 0.9rem;
+}
+
+.app-hero {
+    padding: 1.4rem;
+}
+
+.app-hero h1,
+.app-hero h2,
+.app-heading {
+    color: #172033;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.app-kicker {
+    color: var(--app-accent);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.app-muted {
+    color: var(--app-muted);
+}
+
+.app-stat {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(17, 24, 39, 0.07);
+    border-radius: 20px;
+    padding: 1rem 1.1rem;
+}
+
+.app-stat strong {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.35rem;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+    padding: 1.5rem;
+}
+
+.service-card-highlight {
+    background: linear-gradient(180deg, rgba(15, 118, 110, 0.08), rgba(255, 255, 255, 0.96));
+}
+
+.service-badge {
+    align-items: center;
+    border-radius: 999px;
+    display: inline-flex;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    padding: 0.42rem 0.8rem;
+    text-transform: uppercase;
+}
+
+.service-badge-insurance {
+    background: rgba(15, 118, 110, 0.11);
+    color: var(--app-primary-deep);
+}
+
+.service-badge-epass {
+    background: rgba(244, 162, 97, 0.16);
+    color: #9a4f13;
+}
+
+.service-price {
+    color: var(--app-accent);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.service-meta {
+    color: var(--app-muted);
+    display: grid;
+    gap: 0.45rem;
+}
+
+.step-card,
+.info-card {
+    padding: 1.4rem;
+}
+
+.step-number {
+    align-items: center;
+    background: linear-gradient(135deg, var(--app-primary), var(--app-primary-deep));
+    border-radius: 16px;
+    color: #fff;
+    display: inline-flex;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    height: 42px;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 42px;
+}
+
+.app-form-card {
+    padding: 1.5rem;
+}
+
+.app-form-section + .app-form-section {
+    border-top: 1px solid rgba(17, 24, 39, 0.08);
+    margin-top: 1.4rem;
+    padding-top: 1.4rem;
+}
+
+.app-form-section-title {
+    align-items: center;
+    display: flex;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.app-form-section-title span {
+    align-items: center;
+    background: rgba(15, 118, 110, 0.12);
+    border-radius: 14px;
+    color: var(--app-primary-deep);
+    display: inline-flex;
+    font-size: 0.9rem;
+    height: 34px;
+    justify-content: center;
+    width: 34px;
+}
+
+.app-upload-box {
+    background: linear-gradient(135deg, rgba(244, 162, 97, 0.14), rgba(255, 255, 255, 0.92));
+    border: 1px dashed rgba(231, 111, 81, 0.36);
+    border-radius: 22px;
+    padding: 1.1rem;
+}
+
+.app-input,
+.app-select,
+.app-textarea,
+.form-control,
+.form-select {
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(17, 24, 39, 0.10);
+    border-radius: 14px;
+    min-height: 50px;
+}
+
+.app-table-wrap {
+    overflow: hidden;
+    padding: 0.35rem;
+}
+
+.app-pricing-table {
+    margin-bottom: 0;
+}
+
+.app-pricing-table thead th {
+    background: #172033;
+    border-bottom: none;
+    color: #fff;
+    font-size: 0.87rem;
+    padding: 1rem 0.9rem;
+    text-transform: uppercase;
+}
+
+.app-pricing-table tbody td {
+    border-color: rgba(17, 24, 39, 0.06);
+    padding: 1rem 0.9rem;
+    vertical-align: middle;
+}
+
+.track-search-card,
+.dashboard-toolbar {
+    padding: 1.4rem;
+}
+
+.order-status {
+    border-radius: 999px;
+    display: inline-flex;
+    font-size: 0.82rem;
+    font-weight: 800;
+    padding: 0.5rem 0.85rem;
+}
+
+.order-status.pending {
+    background: rgba(244, 162, 97, 0.18);
+    color: #9a4f13;
+}
+
+.order-status.pending_verification {
+    background: rgba(69, 123, 157, 0.16);
+    color: #184e77;
+}
+
+.order-status.paid {
+    background: rgba(42, 157, 143, 0.14);
+    color: #136f63;
+}
+
+.order-status.completed {
+    background: rgba(15, 118, 110, 0.14);
+    color: var(--app-primary-deep);
+}
+
+.order-card {
+    padding: 1.35rem;
+}
+
+.order-card-header,
+.order-card-meta {
+    align-items: center;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: space-between;
+}
+
+.order-card-meta {
+    color: var(--app-muted);
+    flex-wrap: wrap;
+    font-size: 0.92rem;
+    justify-content: flex-start;
+}
+
+.admin-summary-card {
+    padding: 1.25rem;
+}
+
+.admin-summary-number {
+    color: #172033;
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.app-footer {
+    background: #172033;
+    color: rgba(255, 255, 255, 0.84);
+    margin-top: 2rem;
+}
+
+.app-footer-brand {
+    color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+
+.app-footer-text,
+.app-footer-copy {
+    color: rgba(255, 255, 255, 0.64);
+}
+
+.app-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-bottom: 0.75rem;
+}
+
+.app-footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 991.98px) {
+    .app-footer-links {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .app-hero,
+    .app-form-card,
+    .track-search-card,
+    .dashboard-toolbar {
+        padding: 1.2rem;
+    }
+
+    .service-price {
+        font-size: 1.55rem;
+    }
+
+    .order-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
