@@ -111,6 +111,7 @@ body.app-shell {
         background-color 220ms ease,
         transform 220ms ease;
     width: 100%;
+    will-change: padding, min-height;
 }
 
 .navbar-collapse.collapse {
